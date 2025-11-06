@@ -24,25 +24,29 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li>
-                <a href="service.html">Services</a>
-                <div class="dropdown-content">
-                    <a href="#bursary-management">Bursary Management</a>
-                    <a href="#learnerships">Learnerships</a>
-                    <a href="#strategy-consulting">Strategy Consulting</a>
-                    <a href="#crm-martech">CRM & Martech</a>
-                    <a href="#financial-reporting">Financial Reporting & Tax</a>
-                    <a href="#employment-equity">Employment Equity</a>
-                    <a href="#higher-ed-access-fund">Higher ED Access Fund</a>
-                </div>
+            <a href="service.html">Services</a>
+            <div class="dropdown-content">
+                <a href="service/bbbee.html">BBBEE Consulting</a>
+                <a href="service/learnership.html">Learnerships</a>
+                <a href="service/bursary_management.html">Bursary Management</a>
+                <a href="service/crm.html">CRM & Martech</a>
+                <a href="service/financial.html">Financial Reporting & Tax</a>
+                <a href="service/employment.html">Employment Equity</a>
+                <a href="service/higher.html">Higher ED Access Fund</a>
+                <a href="service/change.html">Change Management</a>
+                <a href="service/esg.html">ESG Consulting</a>
+                <a href="service/ai.html">AI Compliance Agents</a>
+                <a href="service/higher.html">Higher ED Access Fund</a>
+            </div>
             </li>
             <li>
                 <a href="training.html">Training</a>
                 <div class="dropdown-content">
-                    <a href="#training1">BBBEE Scorecard Training</a>
-                    <a href="#training2">Employment Equity Committee Training</a>
-                    <a href="#training3">Diversity, Inclusion & Disability Awareness</a>
-                    <a href="#training4">Sales Strategy Training</a>
-                    <a href="#training5">Financial Training</a>
+                    <a href="trainings/bbbee.html">BBBEE Scorecard Training</a>
+                    <a href="trainings/equity.html">Employment Equity Committee Training</a>
+                    <a href="trainings/diversity.html">Diversity, Inclusion & Disability Awareness</a>
+                    <a href="trainings/sales.html">Sales Strategy Training</a>
+                    <a href="trainings/finance.html">Financial Training</a>
                 </div>
             </li>
             <li><a href="insight.html">Insight</a></li>
@@ -263,22 +267,70 @@
         const menuToggle = document.getElementById('menu-toggle');
         const navMenu = document.getElementById('nav-menu');
 
+        // Toggle mobile menu
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
 
-        
+        // Close menu when clicking links (for mobile)
         document.querySelectorAll('#nav-menu a').forEach(link => {
             link.addEventListener('click', (e) => {
-                if (link.nextElementSibling && link.nextElementSibling.classList.contains('dropdown-content')) {
-                    e.preventDefault();
-                    link.parentElement.classList.toggle('dropdown-active');
-                } else {
+                // If it's a parent link with dropdown in mobile, toggle dropdown instead
+                const parentLi = link.parentElement;
+                if (window.innerWidth <= 768 && parentLi.classList.contains('has-dropdown') && e.target === link) {
+                    if (link.getAttribute('href') === '#' || link.getAttribute('href').endsWith('.html')) {
+                        e.preventDefault();
+                        parentLi.classList.toggle('active');
+                        return;
+                    }
+                }
+                
+                // Close mobile menu on any other click
+                if (window.innerWidth <= 768) {
                     navMenu.classList.remove('active');
                     menuToggle.classList.remove('active');
                 }
             });
+        });
+
+        // Handle dropdown toggle on mobile
+        document.querySelectorAll('.has-dropdown > a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    const parentLi = link.parentElement;
+                    
+                    // Close other dropdowns
+                    document.querySelectorAll('.has-dropdown').forEach(item => {
+                        if (item !== parentLi) {
+                            item.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current dropdown
+                    parentLi.classList.toggle('active');
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('nav')) {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+
+        // Reset menu state on window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+                document.querySelectorAll('.has-dropdown').forEach(item => {
+                    item.classList.remove('active');
+                });
+            }
         });
 
         
