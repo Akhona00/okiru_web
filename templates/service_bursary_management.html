@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
+    <div class="bouncing-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
     <nav>
         <div class="logo-container">
-            <div style="width: 55px; height: 55px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; font-size: 24px;">OK</div>
+            <div class="logos"><img src="okiru.logo.jpg" alt="Logo"></div>
             <div class="tagline">Smart Data. Smarter Transformation</div>
         </div>
 
@@ -42,7 +47,7 @@
                 <a href="training.html">Training</a>
                 <div class="dropdown-content">
                     <a href="training_bbbee.html">BBBEE Scorecard Training</a>
-                    <a href="training_equity.css">Employment Equity Committee Training</a>
+                    <a href="training_equity.html">Employment Equity Committee Training</a>
                     <a href="training_diversity.html">Diversity, Inclusion & Disability Awareness</a>
                     <a href="training_sales.html">Sales Strategy Training</a>
                     <a href="training_finance.html">Financial Training</a>
@@ -67,7 +72,7 @@
 
     <section class="matters">
         <div class="image">
-            <img src="bursary_management.jpg" alt="Bursary Management">
+            <img src="servicez-images/optimized_Bursary Management Page_427x295.jpg" alt="Bursary Management">
         </div>
         <div class="content">
             <p>You’re spending on bursaries. Maybe to meet B-BBEE targets. Maybe because it’s the right thing to do. Maybe to plug a skills gap in your workforce. Behind the good intention lies complexity: where to find candidates, how to track them and how to measure return on investment.</p>
@@ -79,40 +84,43 @@
         <h2>​​Our Partnered Universities</h2>
         <div class="university-logos">
             <div class="logo">
-                <img src="university1.logo.jpg" alt="University 1 Logo" onerror="this.style.display='none'">
+                <img src="universities/CPUT_Logo_300x300.png" alt="University 1 Logo" onerror="this.style.display='none'">
             </div>
             <div class="logo">
-                <img src="university2.logo.jpg" alt="University 2 Logo" onerror="this.style.display='none'">
+                <img src="universities/e39cd3e3-4b5c-4c1c-b464-a24d90abf4c3.png" alt="University 2 Logo" onerror="this.style.display='none'">
             </div>
             <div class="logo">
-                <img src="university3.logo.jpg" alt="University 3 Logo" onerror="this.style.display='none'">
+                <img src="universities/optimized_bf620c2f-f26c-429a-a782-b219cb348bbc_200x150.png" alt="University 3 Logo" onerror="this.style.display='none'">
             </div>
             <div class="logo">
-                <img src="university4.logo.jpg" alt="University 4 Logo" onerror="this.style.display='none'">
+                <img src="universities/optimized_db3fb156c48cf634c6afba1ca3a2b5a0_280x198.png" alt="University 4 Logo" onerror="this.style.display='none'">
             </div>
             <div class="logo">
-                <img src="university5.logo.jpg" alt="University 5 Logo" onerror="this.style.display='none'">
+                <img src="universities/optimized_download -8-_500x625.jpg" alt="University 5 Logo" onerror="this.style.display='none'">
             </div>
             <div class="logo">
-                <img src="university6.logo.jpg" alt="University 6 Logo" onerror="this.style.display='none'">
+                <img src="universities/optimized_dut-durban-university-of-technology-logo-png_seeklogo-432504_200x200.png" alt="University 6 Logo" onerror="this.style.display='none'">
             </div>
             <div class="logo">
-                <img src="university7.logo.jpg" alt="University 7 Logo" onerror="this.style.display='none'">
+                <img src="universities/optimized_gibs_logo_200x200.jpg" alt="University 7 Logo" onerror="this.style.display='none'">
             </div>
             <div class="logo">
-                <img src="university8.logo.jpg" alt="University 8 Logo" onerror="this.style.display='none'">
+                <img src="universities/optimized_JBS_200x93.png" alt="University 8 Logo" onerror="this.style.display='none'">
             </div>
             <div class="logo">
-                <img src="university9.logo.jpg" alt="University 9 Logo" onerror="this.style.display='none'">
+                <img src="universities/optimized_SAGEA_affiliate-logos4_TUT_280x198.png" alt="University 9 Logo" onerror="this.style.display='none'">
             </div>
             <div class="logo">
-                <img src="university10.logo.jpg" alt="University 10 Logo" onerror="this.style.display='none'">
+                <img src="universities/optimized_UCTBS_280x127.png" alt="University 10 Logo" onerror="this.style.display='none'">
             </div>
             <div class="logo">
-                <img src="university11.logo.jpg" alt="University 11 Logo" onerror="this.style.display='none'">
+                <img src="universities/optimized_university-of-pretoria-logo-85C75B0561-seeklogo.com_200x208.png" alt="University 11 Logo" onerror="this.style.display='none'">
             </div>
             <div class="logo">
-                <img src="university12.logo.jpg" alt="University 12 Logo" onerror="this.style.display='none'">
+                <img src="universities/optimized_University_of_Cape_Town_logo.svg_200x203.png" onerror="this.style.display='none'">
+            </div>
+            <div class="logo">
+                <img src="universities/WBS.jpg" alt="University 13 Logo" onerror="this.style.display='none'">
             </div>
     </section>
 
@@ -174,16 +182,16 @@
         const menuToggle = document.getElementById('menu-toggle');
         const navMenu = document.getElementById('nav-menu');
 
-        // Toggle mobile menu
+        
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking links (for mobile)
+        
         document.querySelectorAll('#nav-menu a').forEach(link => {
             link.addEventListener('click', (e) => {
-                // If it's a parent link with dropdown in mobile, toggle dropdown instead
+                
                 const parentLi = link.parentElement;
                 if (window.innerWidth <= 768 && parentLi.classList.contains('has-dropdown') && e.target === link) {
                     if (link.getAttribute('href') === '#' || link.getAttribute('href').endsWith('.html')) {
@@ -193,7 +201,7 @@
                     }
                 }
                 
-                // Close mobile menu on any other click
+            
                 if (window.innerWidth <= 768) {
                     navMenu.classList.remove('active');
                     menuToggle.classList.remove('active');
@@ -201,27 +209,27 @@
             });
         });
 
-        // Handle dropdown toggle on mobile
+       
         document.querySelectorAll('.has-dropdown > a').forEach(link => {
             link.addEventListener('click', (e) => {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
                     const parentLi = link.parentElement;
                     
-                    // Close other dropdowns
+                    
                     document.querySelectorAll('.has-dropdown').forEach(item => {
                         if (item !== parentLi) {
                             item.classList.remove('active');
                         }
                     });
                     
-                    // Toggle current dropdown
+                    
                     parentLi.classList.toggle('active');
                 }
             });
         });
 
-        // Close menu when clicking outside
+        
         document.addEventListener('click', (e) => {
             if (!e.target.closest('nav')) {
                 navMenu.classList.remove('active');
@@ -229,7 +237,7 @@
             }
         });
 
-        // Reset menu state on window resize
+        
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
                 navMenu.classList.remove('active');
@@ -240,7 +248,7 @@
             }
         });
 
-         // Intersection Observer for scroll animations
+        
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -254,12 +262,12 @@
             });
         }, observerOptions);
 
-        // Observe elements with animate-on-scroll class
+        
         document.querySelectorAll('.animate-on-scroll').forEach(el => {
             observer.observe(el);
         });
 
-        // Add parallax effect to main section
+        
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const main = document.querySelector('.main');

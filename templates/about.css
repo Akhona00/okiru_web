@@ -9,8 +9,64 @@
             background: #f8fafc;
             color: #333;
             font-family: "Poppins", sans-serif;
-            font-size: 12px;
+            font-size: 15px;
         }
+
+        
+        .bouncing-circles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: bounce 3s ease-in-out infinite;
+        }
+
+        .circle-1 {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #e499eb, #bc8ee9);
+            left: 15%;
+            top: 20%;
+            animation-delay: 0s;
+        }
+
+        .circle-2 {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #e09cdf, #e2b57a);
+            right: 20%;
+            top: 30%;
+            animation-delay: 1s;
+        }
+
+        .circle-3 {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #df99da, #94a8e5);
+            left: 50%;
+            top: 60%;
+            animation-delay: 2s;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-40px) scale(1.1);
+            }
+        }
+
 
         nav {
             display: flex;
@@ -202,7 +258,7 @@
             transform: rotate(-45deg) translate(8px, -8px);
         }
 
-        /* Content Demo */
+       
         .content-demo {
             padding: 60px 20px;
             text-align: center;
@@ -993,7 +1049,7 @@
     }
 }
 
-/* Main content spacer for demo */
+
         .content-spacer {
             flex: 1;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -1193,7 +1249,7 @@
             color: #667eea;
         }
 
-        /* Responsive design */
+       
         @media (max-width: 1024px) {
             .footer-container {
                 grid-template-columns: repeat(2, 1fr);
@@ -1221,7 +1277,7 @@
             }
         }
 
-        /* Decorative elements */
+        
         footer::after {
             content: '';
             position: absolute;

@@ -9,7 +9,44 @@
             background: #f8fafc;
             color: #333;
             font-family: "Poppins", sans-serif;
-            font-size: 12px;
+            font-size: 15px;
+        }
+
+        
+        .bouncing-circles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: bounce 3s ease-in-out infinite;
+        }
+
+        .circle-1 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #ed7c7c, #f00b0b);
+            left: 15%;
+            top: 20%;
+            animation-delay: 0s;
+        }
+
+        .circle-2 {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #dc933a, #994a09);
+            right: 20%;
+            top: 30%;
+            animation-delay: 1s;
         }
 
         nav {
@@ -202,7 +239,7 @@
             transform: rotate(-45deg) translate(8px, -8px);
         }
 
-        /* Content Demo */
+       
         .content-demo {
             padding: 60px 20px;
             text-align: center;
@@ -299,8 +336,8 @@
         }
 
         .first-part {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
-            border: 1px solid rgba(99, 102, 241, 0.2);
+            background: url('PersonwithOrangeFlowers.png');
+            border: 1px solid rgba(245, 145, 6, 0.2);
             border-radius: 24px;
             padding: 80px 60px;
             margin-bottom: 80px;
@@ -334,7 +371,7 @@
         .first-part h2 {
             font-size: 3.5rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            background: linear-gradient(135deg, #f8f8f9 0%, #fcfcfc 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -344,8 +381,8 @@
         }
 
         .first-part p {
-            font-size: 1.25rem;
-            color: #475569;
+            font-size: 20px;
+            color: #fafbfc;
             line-height: 1.8;
             position: relative;
             z-index: 1;
@@ -374,7 +411,7 @@
         }
 
         .card {
-            background: linear-gradient(135deg, rgba(30, 41, 59, 0.05) 0%, rgba(15, 23, 42, 0.08) 100%);
+            background: linear-gradient(135deg, rgba(253, 253, 254, 0.885) 0%, rgba(250, 249, 250, 0.77) 100%);
             border: 1px solid rgba(148, 163, 184, 0.2);
             border-radius: 20px;
             padding: 40px;
@@ -390,7 +427,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #6366f1 0%, #a855f7 100%);
+            background: linear-gradient(90deg, #fe7418 0%, #f79655 100%);
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.4s ease;
@@ -420,7 +457,7 @@
             content: '';
             width: 8px;
             height: 8px;
-            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            background: linear-gradient(135deg, #f19063 0%, #f67011 100%);
             border-radius: 50%;
             display: inline-block;
             box-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
@@ -428,8 +465,8 @@
         }
 
         @keyframes glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.6); }
-            50% { box-shadow: 0 0 30px rgba(168, 85, 247, 0.8); }
+            0%, 100% { box-shadow: 0 0 20px rgba(241, 111, 99, 0.6); }
+            50% { box-shadow: 0 0 30px rgba(240, 133, 18, 0.8); }
         }
 
         .card p {
@@ -457,7 +494,7 @@
             content: '→';
             position: absolute;
             left: 0;
-            color: #6366f1;
+            color: #d35d0e;
             font-weight: bold;
             font-size: 1.3rem;
             transition: all 0.3s ease;
@@ -465,7 +502,7 @@
 
         .card:hover ul li::before {
             left: 5px;
-            color: #a855f7;
+            color: #f79b55;
         }
 
         .card ul li:hover {
@@ -473,7 +510,7 @@
             transform: translateX(5px);
         }
 
-        /* Third Part - Interactive Cards */
+        
         .third-part {
             max-width: 1400px;
             margin: 80px auto;
@@ -500,11 +537,11 @@
         }
 
         .card1 .expandable-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ea9f66 0%, #e15b01 100%);
         }
 
         .card2 .expandable-header {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #b11f14 0%, #f07f8e 100%);
         }
 
         .card3 .expandable-header {
@@ -512,7 +549,7 @@
         }
 
         .card4 .expandable-header {
-            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            background: linear-gradient(135deg, #8043e9 0%, #cc87ef 100%);
         }
 
         .expandable-header {
@@ -573,7 +610,7 @@
             margin-bottom: 0;
         }
 
-        /* Footer */
+       
         footer {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             color: white;
@@ -761,7 +798,7 @@
             color: #667eea;
         }
 
-        /* Responsive */
+        
         @media (max-width: 1024px) {
             .footer-container {
                 grid-template-columns: repeat(2, 1fr);

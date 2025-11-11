@@ -9,8 +9,47 @@
             background: #f8fafc;
             color: #333;
             font-family: "Poppins", sans-serif;
-            font-size: 12px;
+            font-size: 15px;
         }
+
+        
+        .bouncing-circles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: bounce 3s ease-in-out infinite;
+        }
+
+        .circle-1 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #eda97c, #f56201);
+            left: 15%;
+            top: 20%;
+            animation-delay: 0s;
+        }
+
+        .circle-2 {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #ed9696, #e51919);
+            right: 20%;
+            top: 30%;
+            animation-delay: 1s;
+        }
+
+
 
         nav {
             display: flex;
@@ -202,7 +241,6 @@
             transform: rotate(-45deg) translate(8px, -8px);
         }
 
-        /* Content Demo */
         .content-demo {
             padding: 60px 20px;
             text-align: center;
@@ -292,9 +330,8 @@
             }
         }
 
-        /* Hero Section */
         .home {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: url(Modern_Minimalist_Chair.png);
             padding: 120px 50px 100px;
             text-align: center;
             color: white;
@@ -390,7 +427,7 @@
             color: white;
         }
 
-        /* First Part - Split Section */
+        
         .first-part {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -495,7 +532,7 @@
             font-size: 1.2em;
         }
 
-        /* Second Part - Three Columns */
+        
         .second-part {
             padding: 100px 50px;
             background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
@@ -581,7 +618,7 @@
             transform: translateX(5px);
         }
 
-        /* Third Part - Services Cards */
+        
         .third-part {
             padding: 100px 50px;
             background: white;
@@ -655,7 +692,7 @@
             color: #475569;
         }
 
-        /* Fourth Part - FAQ */
+       
         .fourth-part {
             padding: 100px 50px;
             background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
@@ -747,7 +784,7 @@
             max-height: 500px;
         }
 
-        /* Footer */
+       
         footer {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             color: white;
@@ -953,7 +990,7 @@
             pointer-events: none;
         }
 
-        /* Responsive */
+        
         @media (max-width: 1024px) {
             .first-part {
                 grid-template-columns: 1fr;

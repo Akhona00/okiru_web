@@ -9,7 +9,54 @@
             background: #f8fafc;
             color: #333;
             font-family: "Poppins", sans-serif;
-            font-size: 12px;
+            font-size: 15px;
+        }
+
+        .bouncing-circles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: bounce 3s ease-in-out infinite;
+        }
+
+        .circle-1 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #d87ced, #5c0270);
+            left: 15%;
+            top: 20%;
+            animation-delay: 0s;
+        }
+
+        .circle-2 {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #bf89f4, #6419e5);
+            right: 20%;
+            top: 30%;
+            animation-delay: 1s;
+        }
+
+
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-40px) scale(1.1);
+            }
         }
 
         nav {
@@ -202,7 +249,7 @@
             transform: rotate(-45deg) translate(8px, -8px);
         }
 
-        /* Content Demo */
+       
         .content-demo {
             padding: 60px 20px;
             text-align: center;
@@ -293,12 +340,12 @@
         }
 
 
-        /* First Part - Hero Section */
+        
         .first-part {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: url("Chromatic_Cascade_Gallery.png");
             padding: 120px 50px 100px;
             text-align: center;
-            color: white;
+            color: rgb(20, 19, 19);
             position: relative;
             overflow: hidden;
             animation: fadeIn 1s ease;
@@ -368,7 +415,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Second Part - Why Partner Section */
+        
         .second-part {
             padding: 100px 50px;
             background: white;
@@ -421,7 +468,7 @@
         }
 
         .image::before {
-            content: '🔄';
+            content: '';
             font-size: 8em;
             opacity: 0.3;
             animation: rotate 20s linear infinite;
@@ -486,7 +533,7 @@
             opacity: 0.1;
         }
 
-        /* Cards Section */
+        
         .cards {
             padding: 100px 50px;
             background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
@@ -624,7 +671,7 @@
             margin-bottom: 0;
         }
 
-        /* Contact Section */
+      
         section.contact {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             padding: 100px 50px;
@@ -708,7 +755,7 @@
             transform: translateY(-2px);
         }
 
-        /* Footer */
+        
         footer {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             color: white;
@@ -914,7 +961,7 @@
             pointer-events: none;
         }
 
-        /* Responsive */
+        
         @media (max-width: 1024px) {
             .second-part {
                 grid-template-columns: 1fr;

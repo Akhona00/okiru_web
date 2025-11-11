@@ -9,7 +9,7 @@
             background: #f8fafc;
             color: #333;
             font-family: "Poppins", sans-serif;
-            font-size: 12px;
+            font-size: 15px;
         }
 
         nav {
@@ -202,7 +202,7 @@
             transform: rotate(-45deg) translate(8px, -8px);
         }
 
-        /* Content Demo */
+       
         .content-demo {
             padding: 60px 20px;
             text-align: center;
@@ -1046,7 +1046,7 @@
             color: #667eea;
         }
 
-        /* Responsive design */
+        
         @media (max-width: 1024px) {
             .footer-container {
                 grid-template-columns: repeat(2, 1fr);
@@ -1074,7 +1074,6 @@
             }
         }
 
-        /* Decorative elements */
         footer::after {
             content: '';
             position: absolute;

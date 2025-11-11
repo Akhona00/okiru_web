@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
+    <div class="bouncing-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
     <nav>
         <div class="logo-container">
-            <div style="width: 55px; height: 55px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; font-size: 24px;">OK</div>
+            <div class="logo"><img src="okiru.logo.jpg" alt="Logo"></div>
             <div class="tagline">Smart Data. Smarter Transformation</div>
         </div>
 
@@ -42,7 +47,7 @@
                 <a href="training.html">Training</a>
                 <div class="dropdown-content">
                     <a href="training_bbbee.html">BBBEE Scorecard Training</a>
-                    <a href="training_equity.css">Employment Equity Committee Training</a>
+                    <a href="training_equity.html">Employment Equity Committee Training</a>
                     <a href="training_diversity.html">Diversity, Inclusion & Disability Awareness</a>
                     <a href="training_sales.html">Sales Strategy Training</a>
                     <a href="training_finance.html">Financial Training</a>
@@ -132,7 +137,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
-                <div style="width: 120px; height: 60px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; font-size: 32px; margin-bottom: 20px;">Okiru</div>
+                <img src="okiru.logo.jpg" alt="Okiru Consulting">
                 <p>Transforming businesses through strategic consulting, innovative solutions, and sustainable growth practices.</p>
             </div>
             
@@ -186,33 +191,33 @@
         const menuToggle = document.getElementById('menu-toggle');
         const navMenu = document.getElementById('nav-menu');
 
-        // Toggle mobile menu
+       
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
 
-        // Handle dropdown clicks on mobile
+        
         document.querySelectorAll('.has-dropdown > a').forEach(link => {
             link.addEventListener('click', (e) => {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
                     const parentLi = link.parentElement;
                     
-                    // Close other dropdowns
+                    
                     document.querySelectorAll('.has-dropdown').forEach(item => {
                         if (item !== parentLi) {
                             item.classList.remove('active');
                         }
                     });
                     
-                    // Toggle current dropdown
+                    
                     parentLi.classList.toggle('active');
                 }
             });
         });
 
-        // Close dropdown links properly on mobile
+       
         document.querySelectorAll('.dropdown-content a').forEach(link => {
             link.addEventListener('click', () => {
                 if (window.innerWidth <= 768) {
@@ -225,7 +230,7 @@
             });
         });
 
-        // Close menu when clicking outside
+        
         document.addEventListener('click', (e) => {
             if (!e.target.closest('nav')) {
                 navMenu.classList.remove('active');
@@ -236,7 +241,7 @@
             }
         });
 
-        // Reset menu state on window resize
+        
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
                 navMenu.classList.remove('active');

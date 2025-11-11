@@ -9,8 +9,56 @@
             background: #f8fafc;
             color: #333;
             font-family: "Poppins", sans-serif;
-            font-size: 16px;
+            font-size: 15px;
             line-height: 1.6;
+        }
+
+        
+        .bouncing-circles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: bounce 3s ease-in-out infinite;
+        }
+
+        .circle-1 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #f36262, #f9972f);
+            left: 15%;
+            top: 20%;
+            animation-delay: 0s;
+        }
+
+        .circle-2 {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #d38af8, #470382);
+            right: 20%;
+            top: 30%;
+            animation-delay: 1s;
+        }
+
+
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-40px) scale(1.1);
+            }
         }
 
         nav {
@@ -189,9 +237,8 @@
             border-radius: 2px;
         }
 
-        /* Hero Section */
         .home {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: url("training/flowers_tiny_delicate_macro-wallpaper-1920x1080-1.jpg");
             color: white;
             padding: 80px 50px;
             text-align: center;
@@ -254,12 +301,12 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: #4ade80;
+            color: #4a97de;
             font-weight: bold;
             font-size: 1.3em;
         }
 
-        /* Download Section */
+        
         .download {
             padding: 80px 50px;
             background: #f8fafc;
@@ -282,7 +329,7 @@
             transform: translateX(-50%);
             width: 100px;
             height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(90deg, #66b3ea, #1245a5);
             border-radius: 2px;
         }
 
@@ -312,7 +359,7 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(90deg, #66baea, #133da4);
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
@@ -320,7 +367,7 @@
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 40px rgba(102, 126, 234, 0.25);
-            border-color: #667eea;
+            border-color: #07196a;
         }
 
         .card:hover::before {
@@ -340,7 +387,7 @@
         .card a {
             display: inline-block;
             padding: 12px 30px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #66a8ea, #0a4988);
             color: white;
             text-decoration: none;
             border-radius: 8px;
@@ -370,7 +417,7 @@
             box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
         }
 
-        /* Footer */
+       
         footer {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             color: white;
@@ -565,7 +612,7 @@
             color: #667eea;
         }
 
-        /* Mobile Responsive */
+        
         @media (max-width: 768px) {
             nav {
                 padding: 15px 20px;

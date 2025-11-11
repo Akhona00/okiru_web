@@ -9,7 +9,55 @@
             background: #f8fafc;
             color: #333;
             font-family: "Poppins", sans-serif;
-            font-size: 12px;
+            font-size: 15px;
+        }
+
+       
+        .bouncing-circles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: bounce 3s ease-in-out infinite;
+        }
+
+        .circle-1 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #ee65e7, #8a0388);
+            left: 15%;
+            top: 20%;
+            animation-delay: 0s;
+        }
+
+        .circle-2 {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #d69ce7, #600668);
+            right: 20%;
+            top: 30%;
+            animation-delay: 1s;
+        }
+
+
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-40px) scale(1.1);
+            }
         }
 
         nav {
@@ -202,7 +250,7 @@
             transform: rotate(-45deg) translate(8px, -8px);
         }
 
-        /* Content Demo */
+        
         .content-demo {
             padding: 60px 20px;
             text-align: center;
@@ -317,7 +365,7 @@
 }
 
 .home::before {
-    background: #0a0a0a;
+    background: #0b329c;
     width: 400px;
     height: 400px;
     top: -100px;
@@ -325,7 +373,7 @@
 }
 
 .home::after {
-    background: #060606;
+    background: #094a94;
     width: 300px;
     height: 300px;
     bottom: -80px;
@@ -392,7 +440,7 @@
 }
 
 .download-section h2 {
-    color: #080808;
+    color: #031333;
     font-size: 2.2em;
     margin-bottom: 15px;
     text-align: center;
@@ -425,8 +473,8 @@
 
 .download-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(14, 14, 15, 0.25);
-    border-color: #070707;
+    box-shadow: 0 20px 50px rgb(74, 114, 233);
+    border-color: #3d90e3;
 }
 
 .download-card::before {
@@ -436,13 +484,13 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, #3a3a3a, #060606);
+    background: linear-gradient(90deg, #4175d6, #043375);
 }
 
 .document-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #484849, #060606);
+    background: linear-gradient(135deg, #3490e0, #064377);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -466,7 +514,7 @@
 }
 
 .download-card h3 {
-    color: #333;
+    color: #032f4c;
     font-size: 1.3em;
     margin-bottom: 10px;
     font-weight: 600;
@@ -483,7 +531,7 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: linear-gradient(135deg, #303030, #090909);
+    background: linear-gradient(135deg, #4180d1, #03398f);
     color: white;
     padding: 12px 24px;
     border-radius: 8px;
@@ -496,7 +544,7 @@
 }
 
 .download-btn:hover {
-    background: linear-gradient(135deg, #242424, #0e0e0e);
+    background: linear-gradient(135deg, #4093ec, #0e0e0e);
     transform: translateX(5px);
 }
 
@@ -514,8 +562,8 @@
     position: absolute;
     top: 15px;
     right: 15px;
-    background: rgba(102, 126, 234, 0.1);
-    color: #0b0b0b;
+    background: rgba(7, 65, 141, 0.892);
+    color: #79ace9;
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 0.8em;
@@ -628,7 +676,7 @@
     }
 }
 
-/* Main content spacer for demo */
+
         .content-spacer {
             flex: 1;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -828,7 +876,7 @@
             color: #667eea;
         }
 
-        /* Responsive design */
+       
         @media (max-width: 1024px) {
             .footer-container {
                 grid-template-columns: repeat(2, 1fr);
@@ -856,7 +904,7 @@
             }
         }
 
-        /* Decorative elements */
+      
         footer::after {
             content: '';
             position: absolute;

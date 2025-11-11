@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div class="bouncing-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
     <nav>
         <div class="logo-container">
-            <div style="width: 55px; height: 55px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; font-size: 24px;">OK</div>
+            <div class="logo"><img src="okiru.logo.jpg" alt="Logo"></div>
             <div class="tagline">Smart Data. Smarter Transformation</div>
         </div>
 
@@ -42,7 +47,7 @@
                 <a href="training.html">Training</a>
                 <div class="dropdown-content">
                     <a href="training_bbbee.html">BBBEE Scorecard Training</a>
-                    <a href="training_equity.css">Employment Equity Committee Training</a>
+                    <a href="training_equity.html">Employment Equity Committee Training</a>
                     <a href="training_diversity.html">Diversity, Inclusion & Disability Awareness</a>
                     <a href="training_sales.html">Sales Strategy Training</a>
                     <a href="training_finance.html">Financial Training</a>
@@ -71,7 +76,7 @@
     <section class="partOne">
         <h2>Our Learnership Services</h2>
         <div class="image">
-            <img src="learnership.image.jpg" alt="Learnership Image">
+            <img src="servicez-images/optimized_Learnerships_655x453.jpg" alt="Learnership Image">
         </div>
         <div class="text">
             <ul>
@@ -188,16 +193,16 @@
         const menuToggle = document.getElementById('menu-toggle');
         const navMenu = document.getElementById('nav-menu');
 
-        // Toggle mobile menu
+        
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking links (for mobile)
+       
         document.querySelectorAll('#nav-menu a').forEach(link => {
             link.addEventListener('click', (e) => {
-                // If it's a parent link with dropdown in mobile, toggle dropdown instead
+                
                 const parentLi = link.parentElement;
                 if (window.innerWidth <= 768 && parentLi.classList.contains('has-dropdown') && e.target === link) {
                     if (link.getAttribute('href') === '#' || link.getAttribute('href').endsWith('.html')) {
@@ -207,7 +212,7 @@
                     }
                 }
                 
-                // Close mobile menu on any other click
+               
                 if (window.innerWidth <= 768) {
                     navMenu.classList.remove('active');
                     menuToggle.classList.remove('active');
@@ -215,27 +220,27 @@
             });
         });
 
-        // Handle dropdown toggle on mobile
+       
         document.querySelectorAll('.has-dropdown > a').forEach(link => {
             link.addEventListener('click', (e) => {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
                     const parentLi = link.parentElement;
                     
-                    // Close other dropdowns
+                   
                     document.querySelectorAll('.has-dropdown').forEach(item => {
                         if (item !== parentLi) {
                             item.classList.remove('active');
                         }
                     });
                     
-                    // Toggle current dropdown
+                   
                     parentLi.classList.toggle('active');
                 }
             });
         });
 
-        // Close menu when clicking outside
+       
         document.addEventListener('click', (e) => {
             if (!e.target.closest('nav')) {
                 navMenu.classList.remove('active');
@@ -243,7 +248,7 @@
             }
         });
 
-        // Reset menu state on window resize
+        
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
                 navMenu.classList.remove('active');

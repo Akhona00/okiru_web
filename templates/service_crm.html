@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div class="bouncing-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
     <nav>
         <div class="logo-container">
-            <div style="width: 55px; height: 55px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; font-size: 24px;">OK</div>
+            <div class="logo"><img src="okiru.logo.jpg" alt="Logo"></div>
             <div class="tagline">Smart Data. Smarter Transformation</div>
         </div>
 
@@ -42,7 +47,7 @@
                 <a href="training.html">Training</a>
                 <div class="dropdown-content">
                     <a href="training_bbbee.html">BBBEE Scorecard Training</a>
-                    <a href="training_equity.css">Employment Equity Committee Training</a>
+                    <a href="training_equity.html">Employment Equity Committee Training</a>
                     <a href="training_diversity.html">Diversity, Inclusion & Disability Awareness</a>
                     <a href="training_sales.html">Sales Strategy Training</a>
                     <a href="training_finance.html">Financial Training</a>
@@ -68,7 +73,7 @@
     <section class="first-part">
         <h2>Why This Matters</h2>
         <div class="image">
-            <img src="" alt="">
+            <img src="servicez-images/optimized_CRM - Martech_427x295.jpg" alt="">
         </div>
         <div class="content">
             Your Business has taken the decision to buy a  Customer Relationship Management System. Maybe even integrated the marketing tools but leads are still slipping through the cracks, your team hates using the system and reporting is a weekly pain.
@@ -117,59 +122,101 @@
     </section>
 
     <section class="third-part">
-        <div class="card-1">
-            <h2>B-BBEE Verification Tracking</h2>
-            <p>Use Case: Create a dedicated “Verification” pipeline in the CRM where each element of the B-BBEE scorecard (Management Control, Skills Development, ESD, SED) is a stage.
-                How it Works: Every time supporting evidence, like payroll data or supplier affidavits is uploaded, an automated task notifies the responsible manager. A dashboard displays percentage completion and upcoming submission deadlines. Executives can log in at any time to see real-time verification status and outstanding items.</p>
-        </div>
-        <div class="card-2">
-            <h2>Employment Equity Reporting Oversight</h2>
-            <p>Use Case: Automate Employment Equity (EEA2/EEA4) data collection.
-                How it Works: Managers receive automated reminders to submit workforce demographic updates. The CRM consolidates these into a single report for HR and flags any gaps before the Department of Employment and Labour deadline.</p>
-        </div>
-        <div class="card-3">
-            <h2>Skills Development & WSP/ATR Management</h2>
-            <p>Use Case: Map learnerships and bursary spend inside the CRM to monitor SETA grant claims.
-                How it Works: Each learner is a “record” with fields for funding, start/end dates, and proof-of-enrolment documents. Automated scoring highlights whether the company is on track for Skills Development points and sends alerts if claims are approaching expiry.</p>
-        </div>
-        <div class="card-4">
-            <h2>Client & Supplier Vetting for ESD</h2>
-            <p>Use Case: Integrate a supplier portal with the CRM to capture B-BBEE certificates and track expiry.
-                How it Works: Suppliers upload certificates directly; the CRM verifies date validity, sets renewal reminders, and feeds a live procurement-compliance dashboard.</p>
-        </div>
-        <div class="card-5">
-            <h2>Client & Supplier Vetting for ESD</h2>
-            <p>Use Case: Trigger campaigns based on compliance milestones.
-                How it Works: When a verification stage hits 75 % completion, an automated email series updates executives and invites them to a strategy session, ensuring decision-makers stay engaged without manual follow-ups.</p>
+        <div class="use-cases-header">
+            <h2>B-BBEE CRM Use Cases</h2>
+            <p>Discover how our CRM solutions streamline compliance and drive business growth</p>
         </div>
 
-        <div class="card-1">
-            <h2>B-BBEE Verification Tracking</h2>
-            <p>Use Case: Create a dedicated “Verification” pipeline in the CRM where each element of the B-BBEE scorecard (Management Control, Skills Development, ESD, SED) is a stage.
-                How it Works: Every time supporting evidence, like payroll data or supplier affidavits is uploaded, an automated task notifies the responsible manager. A dashboard displays percentage completion and upcoming submission deadlines. Executives can log in at any time to see real-time verification status and outstanding items.</p>
-        </div>
-        <div class="card-2">
-            <h2>Employment Equity Reporting Oversight</h2>
-            <p>Use Case: Automate Employment Equity (EEA2/EEA4) data collection.
-                How it Works: Managers receive automated reminders to submit workforce demographic updates. The CRM consolidates these into a single report for HR and flags any gaps before the Department of Employment and Labour deadline.</p>
-        </div>
-        <div class="card-3">
-            <h2>Skills Development & WSP/ATR Management</h2>
-            <p>Use Case: Map learnerships and bursary spend inside the CRM to monitor SETA grant claims.
-                How it Works: Each learner is a “record” with fields for funding, start/end dates, and proof-of-enrolment documents. Automated scoring highlights whether the company is on track for Skills Development points and sends alerts if claims are approaching expiry.</p>
-        </div>
-        <div class="card-4">
-            <h2>Client & Supplier Vetting for ESD</h2>
-            <p>Use Case: Integrate a supplier portal with the CRM to capture B-BBEE certificates and track expiry.
-                How it Works: Suppliers upload certificates directly; the CRM verifies date validity, sets renewal reminders, and feeds a live procurement-compliance dashboard.</p>
-        </div>
-        <div class="card-5">
-            <h2>Client & Supplier Vetting for ESD</h2>
-            <p>Use Case: Trigger campaigns based on compliance milestones.
-                How it Works: When a verification stage hits 75 % completion, an automated email series updates executives and invites them to a strategy session, ensuring decision-makers stay engaged without manual follow-ups.</p>
+        <div class="cards-carousel">
+            <div class="cards-track">
+                <!-- Card 1 -->
+                <div class="use-case-card">
+                    <div class="card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Supplier Vetting for ESD</h3>
+                    <p>Integrate a supplier portal to capture B-BBEE certificates and track expiry. Suppliers upload certificates directly; the CRM verifies validity, sets renewal reminders, and feeds a live procurement dashboard.</p>
+                    <span class="card-tag">Procurement</span>
+                </div>
+
+                <div class="use-case-card">
+                    <div class="card-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Compliance Campaign Triggers</h3>
+                    <p>Trigger campaigns based on compliance milestones. When verification reaches 75% completion, automated email series update executives and invite them to strategy sessions.</p>
+                    <span class="card-tag">Marketing</span>
+                </div>
+
+                <div class="use-case-card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Employment Equity Reporting</h3>
+                    <p>Automate EEA2/EEA4 data collection with automated reminders to managers for workforce demographic updates. The CRM consolidates reports and flags gaps before Department of Labour deadlines.</p>
+                    <span class="card-tag">HR Automation</span>
+                </div>
+
+                
+                <div class="use-case-card">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Skills Development & WSP/ATR</h3>
+                    <p>Map learnerships and bursary spend to monitor SETA grant claims. Each learner is tracked with funding, dates, and proof-of-enrolment. Automated scoring shows progress toward Skills Development points.</p>
+                    <span class="card-tag">Training</span>
+                </div>
+
+            
+                <div class="use-case-card">
+                    <div class="card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Supplier Vetting for ESD</h3>
+                    <p>Integrate a supplier portal to capture B-BBEE certificates and track expiry. Suppliers upload certificates directly; the CRM verifies validity, sets renewal reminders, and feeds a live procurement dashboard.</p>
+                    <span class="card-tag">Procurement</span>
+                </div>
+
+                
+                <div class="use-case-card">
+                    <div class="card-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Compliance Campaign Triggers</h3>
+                    <p>Trigger campaigns based on compliance milestones. When verification reaches 75% completion, automated email series update executives and invite them to strategy sessions.</p>
+                    <span class="card-tag">Marketing</span>
+                </div>
+
+                
+                <div class="use-case-card">
+                    <div class="card-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>B-BBEE Verification Tracking</h3>
+                    <p>Create a dedicated "Verification" pipeline where each scorecard element is a stage. Automated tasks notify managers when evidence is uploaded, with dashboards showing real-time completion status and deadlines.</p>
+                    <span class="card-tag">Compliance</span>
+                </div>
+
+                <div class="use-case-card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Employment Equity Reporting</h3>
+                    <p>Automate EEA2/EEA4 data collection with automated reminders to managers for workforce demographic updates. The CRM consolidates reports and flags gaps before Department of Labour deadlines.</p>
+                    <span class="card-tag">HR Automation</span>
+                </div>
+
+                <div class="use-case-card">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Skills Development & WSP/ATR</h3>
+                    <p>Map learnerships and bursary spend to monitor SETA grant claims. Each learner is tracked with funding, dates, and proof-of-enrolment. Automated scoring shows progress toward Skills Development points.</p>
+                    <span class="card-tag">Training</span>
+                </div>
+            </div>
         </div>
     </section>
-
 
 
     <footer>
@@ -230,16 +277,16 @@
         const menuToggle = document.getElementById('menu-toggle');
         const navMenu = document.getElementById('nav-menu');
 
-        // Toggle mobile menu
+        
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking links (for mobile)
+        
         document.querySelectorAll('#nav-menu a').forEach(link => {
             link.addEventListener('click', (e) => {
-                // If it's a parent link with dropdown in mobile, toggle dropdown instead
+                
                 const parentLi = link.parentElement;
                 if (window.innerWidth <= 768 && parentLi.classList.contains('has-dropdown') && e.target === link) {
                     if (link.getAttribute('href') === '#' || link.getAttribute('href').endsWith('.html')) {
@@ -249,7 +296,7 @@
                     }
                 }
                 
-                // Close mobile menu on any other click
+                
                 if (window.innerWidth <= 768) {
                     navMenu.classList.remove('active');
                     menuToggle.classList.remove('active');
@@ -257,27 +304,27 @@
             });
         });
 
-        // Handle dropdown toggle on mobile
+        
         document.querySelectorAll('.has-dropdown > a').forEach(link => {
             link.addEventListener('click', (e) => {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
                     const parentLi = link.parentElement;
                     
-                    // Close other dropdowns
+                    
                     document.querySelectorAll('.has-dropdown').forEach(item => {
                         if (item !== parentLi) {
                             item.classList.remove('active');
                         }
                     });
                     
-                    // Toggle current dropdown
+                   
                     parentLi.classList.toggle('active');
                 }
             });
         });
 
-        // Close menu when clicking outside
+      
         document.addEventListener('click', (e) => {
             if (!e.target.closest('nav')) {
                 navMenu.classList.remove('active');
@@ -285,7 +332,7 @@
             }
         });
 
-        // Reset menu state on window resize
+       
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
                 navMenu.classList.remove('active');
@@ -295,6 +342,55 @@
                 });
             }
         });
+
+        
+        const cardsTrack = document.querySelector('.cards-track');
+        
+        cardsTrack.addEventListener('mouseenter', () => {
+            cardsTrack.style.animationPlayState = 'paused';
+        });
+        
+        cardsTrack.addEventListener('mouseleave', () => {
+            cardsTrack.style.animationPlayState = 'running';
+        });
+
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        
+        document.querySelectorAll('.use-case-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+   
     </script>
 </body>
 </html>

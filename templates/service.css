@@ -9,7 +9,44 @@
             background: #f8fafc;
             color: #333;
             font-family: "Poppins", sans-serif;
-            font-size: 12px;
+            font-size: 15px;
+        }
+
+            
+        .bouncing-circles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: bounce 3s ease-in-out infinite;
+        }
+
+        .circle-1 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #ed7c7c, #f00b0b);
+            left: 15%;
+            top: 20%;
+            animation-delay: 0s;
+        }
+
+        .circle-2 {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #dc933a, #994a09);
+            right: 20%;
+            top: 30%;
+            animation-delay: 1s;
         }
 
         nav {
@@ -202,7 +239,7 @@
             transform: rotate(-45deg) translate(8px, -8px);
         }
 
-        /* Content Demo */
+        
         .content-demo {
             padding: 60px 20px;
             text-align: center;
@@ -625,7 +662,7 @@
 
 
 .contact {
-  background: linear-gradient(135deg, #f0f1f2, #f4f4f5);
+  background: url('Chromatic_Cascade_Gallery.png');
   color: #090909;
   text-align: center;
   padding: 100px 20px;
@@ -641,7 +678,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 30% 30%, rgba(17, 16, 16, 0.15), transparent 60%);
+  background: radial-gradient(circle at 30% 30%, rgba(14, 14, 14, 0.96), transparent 60%), ;
   animation: moveLight 6s infinite linear;
 }
 
@@ -729,7 +766,7 @@
   }
 }
 
-/* Main content spacer for demo */
+
         .content-spacer {
             flex: 1;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -929,7 +966,7 @@
             color: #667eea;
         }
 
-        /* Responsive design */
+        
         @media (max-width: 1024px) {
             .footer-container {
                 grid-template-columns: repeat(2, 1fr);
@@ -957,7 +994,7 @@
             }
         }
 
-        /* Decorative elements */
+        
         footer::after {
             content: '';
             position: absolute;

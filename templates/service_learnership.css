@@ -9,7 +9,44 @@
             background: #f8fafc;
             color: #333;
             font-family: "Poppins", sans-serif;
-            font-size: 12px;
+            font-size: 15px;
+        }
+
+       
+        .bouncing-circles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: bounce 3s ease-in-out infinite;
+        }
+
+        .circle-1 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #ed7c7c, #f00b0b);
+            left: 15%;
+            top: 20%;
+            animation-delay: 0s;
+        }
+
+        .circle-2 {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #350a0a, #783d3d);
+            right: 20%;
+            top: 30%;
+            animation-delay: 1s;
         }
 
         nav {
@@ -202,7 +239,7 @@
             transform: rotate(-45deg) translate(8px, -8px);
         }
 
-        /* Content Demo */
+        
         .content-demo {
             padding: 60px 20px;
             text-align: center;
@@ -293,7 +330,7 @@
         }
 
 
-/* Home Section Styles */
+
 .home {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: 120px 50px;
@@ -388,7 +425,7 @@
     }
 }
 
-/* Part One Section Styles */
+
 .partOne {
     padding: 80px 50px;
     background: linear-gradient(180deg, #f8fafc 0%, #e0e7ff 100%);
@@ -509,7 +546,7 @@
     font-size: 1.2em;
 }
 
-/* List Section (Cards) Styles */
+
 .list {
     padding: 80px 50px;
     background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
@@ -617,7 +654,7 @@
     padding-left: 35px;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1024px) {
     .partOne {
         grid-template-columns: 1fr;
@@ -721,10 +758,10 @@
     }
 }
 
-/* Hero Section */
+
 .home {
-    background: linear-gradient(135deg, rgba(99, 0, 212, 0.95) 0%, rgba(0, 0, 0, 0.9) 100%),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:rgb(168,85,247);stop-opacity:0.1" /><stop offset="100%" style="stop-color:rgb(99,102,241);stop-opacity:0.1" /></linearGradient></defs><rect width="1200" height="400" fill="url(%23grad)"/></svg>');
+    background: linear-gradient(135deg, rgba(212, 0, 0, 0.608) 0%, rgba(0, 0, 0, 0.433) 100%),
+                url('Modern_Minimalist_Chair.png');
     background-size: cover;
     background-position: center;
     padding: 120px 50px;
@@ -752,7 +789,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.15"/></svg>');
+    background: url('Modern_Minimalist_Chair.png');
     animation: float 25s linear infinite;
 }
 
@@ -788,7 +825,7 @@
 }
 
 .home p {
-    font-size: 1.15em;
+    font-size: 20px;
     line-height: 1.9;
     max-width: 950px;
     margin: 0 auto 40px;
@@ -801,8 +838,8 @@
 }
 
 .home button {
-    background: linear-gradient(135deg, #ffffff, #e0e7ff);
-    color: #6300d4;
+    background: linear-gradient(135deg, #741010, #e0e7ff);
+    color: #f6f5f8;
     border: none;
     padding: 18px 55px;
     font-size: 1.15em;
@@ -824,7 +861,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(247, 85, 85, 0.3), transparent);
     transition: left 0.5s ease;
 }
 
@@ -834,7 +871,7 @@
 
 .home button:hover {
     transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 20px 50px rgba(168, 85, 247, 0.4);
+    box-shadow: 0 20px 50px rgba(247, 85, 85, 0.4);
 }
 
 .home button a {
@@ -866,7 +903,7 @@
     }
 }
 
-/* Part One Section - Image and Text Grid */
+
 .partOne {
     padding: 100px 50px;
     background: linear-gradient(180deg, #f8fafc 0%, #e0e7ff 50%, #f8fafc 100%);
@@ -892,7 +929,7 @@
 .partOne h2 {
     grid-column: 1 / -1;
     font-size: 2.8em;
-    color: #1e293b;
+    color: #3b1e1e;
     text-align: center;
     margin-bottom: 30px;
     position: relative;
@@ -908,7 +945,7 @@
     transform: translateX(-50%);
     width: 120px;
     height: 5px;
-    background: linear-gradient(90deg, #667eea, #764ba2);
+    background: linear-gradient(90deg, #ea6666, #a24b4b);
     border-radius: 3px;
 }
 
@@ -935,7 +972,7 @@
     left: -20px;
     right: 20px;
     bottom: 20px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #ea6666, #f88c3e);
     border-radius: 20px;
     z-index: 0;
     opacity: 0.2;
@@ -945,7 +982,7 @@
     width: 100%;
     height: auto;
     border-radius: 20px;
-    box-shadow: 0 25px 70px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 25px 70px rgba(234, 102, 102, 0.4);
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     z-index: 1;
@@ -953,7 +990,7 @@
 
 .partOne .image img:hover {
     transform: scale(1.03) rotate(-1deg) translateY(-10px);
-    box-shadow: 0 35px 90px rgba(102, 126, 234, 0.5);
+    box-shadow: 0 35px 90px rgba(234, 102, 102, 0.5);
 }
 
 @keyframes slideInLeft {
@@ -994,7 +1031,7 @@
     border-radius: 15px;
     border-left: 5px solid transparent;
     background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, #667eea, #764ba2) border-box;
+                linear-gradient(135deg, #eaac66, #a24b4b) border-box;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     animation: fadeInUp 0.6s ease backwards;
@@ -1018,7 +1055,7 @@
     transform: translateY(-50%);
     width: 30px;
     height: 30px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #d71b1b, #7a0808);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -1026,20 +1063,20 @@
     justify-content: center;
     font-weight: bold;
     font-size: 0.9em;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 4px 15px rgba(234, 102, 102, 0.4);
 }
 
 .partOne .text ul li:hover {
     transform: translateX(15px) scale(1.02);
     box-shadow: 0 10px 35px rgba(102, 126, 234, 0.25);
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), white) padding-box,
-                linear-gradient(135deg, #667eea, #764ba2) border-box;
+                linear-gradient(135deg, #ea6666, #fc993c) border-box;
 }
 
-/* List Section - Cards */
+
 .list {
     padding: 100px 50px;
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    background: linear-gradient(135deg, #3b1e1e 0%, #2a0f0f 100%);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 40px;
@@ -1064,9 +1101,9 @@
 }
 
 .card {
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.12), rgba(118, 75, 162, 0.12));
+    background: linear-gradient(135deg, rgba(234, 102, 102, 0.12), rgba(162, 75, 79, 0.12));
     backdrop-filter: blur(15px);
-    border: 1px solid rgba(102, 126, 234, 0.3);
+    border: 1px solid rgba(234, 102, 102, 0.3);
     border-radius: 25px;
     padding: 40px;
     color: white;
@@ -1088,7 +1125,7 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(102, 126, 234, 0.25) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(234, 102, 102, 0.25) 0%, transparent 70%);
     opacity: 0;
     transition: opacity 0.6s ease;
 }
@@ -1100,7 +1137,7 @@
     left: 0;
     width: 100%;
     height: 5px;
-    background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+    background: linear-gradient(90deg, #ea6666, #9f1c1c, #f0671e);
     background-size: 200% 100%;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -1123,8 +1160,8 @@
 
 .card:hover {
     transform: translateY(-15px) scale(1.03);
-    box-shadow: 0 30px 70px rgba(102, 126, 234, 0.5);
-    border-color: rgba(168, 85, 247, 0.6);
+    box-shadow: 0 30px 70px rgba(234, 102, 102, 0.5);
+    border-color: rgba(247, 85, 85, 0.6);
 }
 
 .card h2 {
@@ -1134,7 +1171,7 @@
     position: relative;
     z-index: 1;
     padding-bottom: 18px;
-    border-bottom: 2px solid rgba(102, 126, 234, 0.4);
+    border-bottom: 2px solid rgba(234, 102, 102, 0.4);
     font-weight: 700;
 }
 
@@ -1169,7 +1206,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    color: #667eea;
+    color: #ea6666;
     font-weight: bold;
     font-size: 1.3em;
     transition: all 0.3s ease;
@@ -1177,16 +1214,16 @@
 
 .card:hover ul li::before {
     transform: translateX(8px);
-    color: #a855f7;
+    color: #f75555;
 }
 
 .card ul li:hover {
     color: white;
     padding-left: 42px;
-    text-shadow: 0 2px 10px rgba(168, 85, 247, 0.3);
+    text-shadow: 0 2px 10px rgba(247, 85, 85, 0.3);
 }
 
-/* Responsive Design */
+
 @media (max-width: 1024px) {
     .partOne {
         grid-template-columns: 1fr;
@@ -1300,7 +1337,7 @@
     }
 }
 
-/* Main content spacer for demo */
+
         .content-spacer {
             flex: 1;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -1500,7 +1537,7 @@
             color: #667eea;
         }
 
-        /* Responsive design */
+       
         @media (max-width: 1024px) {
             .footer-container {
                 grid-template-columns: repeat(2, 1fr);
@@ -1528,7 +1565,7 @@
             }
         }
 
-        /* Decorative elements */
+       
         footer::after {
             content: '';
             position: absolute;

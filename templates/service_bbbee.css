@@ -9,7 +9,55 @@
             background: #f8fafc;
             color: #333;
             font-family: "Poppins", sans-serif;
-            font-size: 12px;
+            font-size: 15px;
+        }
+
+       
+        .bouncing-circles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: bounce 3s ease-in-out infinite;
+        }
+
+        .circle-1 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #d999eb, #b62ff9);
+            left: 15%;
+            top: 20%;
+            animation-delay: 0s;
+        }
+
+        .circle-2 {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #9ccde0, #032982);
+            right: 20%;
+            top: 30%;
+            animation-delay: 1s;
+        }
+
+
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-40px) scale(1.1);
+            }
         }
 
         nav {
@@ -202,7 +250,7 @@
             transform: rotate(-45deg) translate(8px, -8px);
         }
 
-        /* Content Demo */
+       
         .content-demo {
             padding: 60px 20px;
             text-align: center;
@@ -294,10 +342,8 @@
 
 
 
-
-        /* First Part - Hero Section */
         .first-part {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: url("PersonwithOrangeFlowers.png");
             padding: 100px 50px;
             text-align: center;
             position: relative;
@@ -327,7 +373,7 @@
         }
 
         .first-part p {
-            font-size: 1.15em;
+            font-size: 20px;
             color: rgba(255, 255, 255, 0.95);
             max-width: 1100px;
             margin: 0 auto;
@@ -348,7 +394,7 @@
             }
         }
 
-        /* Second Part - Info Cards */
+       
         .second-part {
             background: #f8fafc;
             padding: 80px 50px;
@@ -402,13 +448,13 @@
         .second-part-content p {
             color: #475569;
             line-height: 1.8;
-            font-size: 1em;
+            font-size: 15px;
             margin-bottom: 15px;
         }
 
-        /* Third Part - Cards Grid */
+       
         .third-part {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            background: linear-gradient(135deg, #ea7676 0%, #eb6b21 100%);
             padding: 80px 50px;
             position: relative;
         }
@@ -468,7 +514,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            background: linear-gradient(135deg, rgba(188, 102, 234, 0.837), rgba(90, 12, 167, 0.771));
             opacity: 0;
             transition: opacity 0.4s ease;
         }
@@ -540,12 +586,12 @@
         .card p {
             color: #cbd5e1;
             line-height: 1.8;
-            font-size: 0.98em;
+            font-size: 15px;
             position: relative;
             z-index: 1;
         }
 
-        /* Fourth Part - Advantages & Disadvantages */
+        
         .fourth-part {
             background: #f8fafc;
             padding: 80px 50px;
@@ -670,7 +716,7 @@
             transform: translateX(5px);
         }
 
-        /* Contact Section */
+        
         section.contact {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 80px 50px;
@@ -785,7 +831,7 @@
             }
         }
         
-/* Footer */
+
         footer {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             color: white;
@@ -833,7 +879,7 @@
         .footer-logo p {
             color: #94a3b8;
             line-height: 1.7;
-            font-size: 0.95em;
+            font-size: 15px;
         }
 
         footer .contact {
@@ -869,7 +915,7 @@
         footer .contact p {
             color: #94a3b8;
             margin-bottom: 12px;
-            font-size: 0.95em;
+            font-size: 15px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -991,7 +1037,7 @@
             pointer-events: none;
         }
 
-        /* Responsive */
+        
         @media (max-width: 1024px) {
             .second-part {
                 grid-template-columns: 1fr;
