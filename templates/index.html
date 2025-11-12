@@ -65,10 +65,9 @@
     <div class="carousel">
         <div class="list">
             <div class="item">
-                <img src="mountain_beneath_the_starry_sky-wallpaper-1920x1080.jpg">
+                <img src="mountain_beneath_the_starry_sky-wallpaper-1920x1080.jpg" alt="Mountain beneath starry sky">
                 <div class="content">
-                    <div class="title">
-                        Transformation thrives on Smart</div>
+                    <div class="title">Transformation thrives on Smart</div>
                     <div class="topic">Advice</div>
                     <div class="des">
                         We help businesses boost their B-BBEE points by combining sector expertise, targeted education and efficient processes that turn compliance into measurable results.
@@ -80,7 +79,7 @@
                 </div>
             </div>
             <div class="item">
-                <img src="space_ring_2-wallpaper-1920x1080.jpg">
+                <img src="abstract_black_layers-wallpaper-1920x1080.jpg" alt="Space ring">
                 <div class="content">
                     <div class="title">Transformation grows with Smart</div>
                     <div class="topic">Tools</div>
@@ -94,7 +93,7 @@
                 </div>
             </div>
             <div class="item">
-                <img src="abstract_black_layers-wallpaper-1920x1080.jpg">
+                <img src="space_ring_2-wallpaper-1920x1080.jpg" alt="Abstract layers">
                 <div class="content">
                     <div class="title">Transformation thrives on Smart</div>
                     <div class="topic">Data</div>
@@ -109,11 +108,7 @@
             </div>
         </div>
 
-     
-        <div class="thumbnail">
-        </div>
-
-      
+        <div class="thumbnail"></div>
         <div class="time"></div>
     </div>
 
@@ -332,10 +327,9 @@
         let carouselDom = document.querySelector('.carousel');
         let SliderDom = carouselDom.querySelector('.carousel .list');
         let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
-        let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
         let timeDom = document.querySelector('.carousel .time');
 
-        function initThumbnails(){
+        function initThumbnails() {
             let SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
             thumbnailBorderDom.innerHTML = '';
             SliderItemsDom.forEach((item, index) => {
@@ -348,6 +342,20 @@
                         <div class="description">${item.querySelector('.topic').textContent}</div>
                     </div>
                 `;
+                thumb.addEventListener('click', () => {
+                    let currentIndex = Array.from(SliderDom.querySelectorAll('.item')).indexOf(SliderDom.querySelector('.item:first-child'));
+                    let targetIndex = index;
+                    
+                    if (targetIndex > currentIndex) {
+                        for (let i = 0; i < (targetIndex - currentIndex); i++) {
+                            showSlider('next');
+                        }
+                    } else if (targetIndex < currentIndex) {
+                        for (let i = 0; i < (currentIndex - targetIndex); i++) {
+                            showSlider('prev');
+                        }
+                    }
+                });
                 thumbnailBorderDom.appendChild(thumb);
             });
         }
@@ -361,19 +369,20 @@
             showSlider('next');
         }, timeAutoNext);
 
-        function showSlider(type){
+        function showSlider(type) {
             let SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
             let thumbnailItemsDom = document.querySelectorAll('.carousel .thumbnail .item');
     
-            if(type === 'next'){
+            if (type === 'next') {
                 SliderDom.appendChild(SliderItemsDom[0]);
                 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
                 carouselDom.classList.add('next');
-            }else{
+            } else {
                 SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
                 thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
                 carouselDom.classList.add('prev');
             }
+            
             clearTimeout(runTimeOut);
             runTimeOut = setTimeout(() => {
                 carouselDom.classList.remove('next');
@@ -386,7 +395,7 @@
             }, timeAutoNext);
         }
 
-  
+       
         let startX = 0;
         let currentX = 0;
         let isDragging = false;
@@ -398,7 +407,7 @@
         });
 
         carouselDom.addEventListener('mousemove', (e) => {
-            if(!isDragging) return;
+            if (!isDragging) return;
             currentX = e.clientX - startX;
         });
 
@@ -408,11 +417,44 @@
             
             const threshold = 50;
             
-            if(currentX > threshold){
-              
+            if (currentX > threshold) {
                 showSlider('prev');
-            } else if(currentX < -threshold){
-              
+            } else if (currentX < -threshold) {
+                showSlider('next');
+            }
+            
+            startX = 0;
+            currentX = 0;
+        });
+
+        carouselDom.addEventListener('mouseleave', () => {
+            if (isDragging) {
+                isDragging = false;
+                carouselDom.classList.remove('grabbing');
+                startX = 0;
+                currentX = 0;
+            }
+        });
+
+        // Touch support for mobile
+        carouselDom.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            startX = e.touches[0].clientX;
+        });
+
+        carouselDom.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            currentX = e.touches[0].clientX - startX;
+        });
+
+        carouselDom.addEventListener('touchend', (e) => {
+            isDragging = false;
+            
+            const threshold = 50;
+            
+            if (currentX > threshold) {
+                showSlider('prev');
+            } else if (currentX < -threshold) {
                 showSlider('next');
             }
             
