@@ -66,28 +66,26 @@
         </ul>
     </nav>
 
-   
+  
     <section class="hero">
         <h1>Insights & Expertise</h1>
         <p>Stay informed with the latest trends, thought leadership, and practical guidance on B-BBEE, ESG, digital transformation, and strategic consulting</p>
     </section>
 
-    
     <section class="filter-section">
-        <button class="filter-btn active">All Insights</button>
-        <button class="filter-btn">B-BBEE</button>
-        <button class="filter-btn">ESG</button>
-        <button class="filter-btn">Digital Transformation</button>
-        <button class="filter-btn">Tax & Compliance</button>
-        <button class="filter-btn">Employment Equity</button>
+        <button class="filter-btn active" data-filter="all">All Insights</button>
+        <button class="filter-btn" data-filter="bbbee">B-BBEE</button>
+        <button class="filter-btn" data-filter="esg">ESG</button>
+        <button class="filter-btn" data-filter="digital">Digital Transformation</button>
+        <button class="filter-btn" data-filter="tax">Tax & Compliance</button>
+        <button class="filter-btn" data-filter="equity">Employment Equity</button>
     </section>
 
-  
     <div class="insights-container">
         <div class="insights-grid">
-            
-            <article class="featured-insight">
-                <img src="servicez-images/optimized_Financial Reporting_427x295.jpg" alt="Featured Insight" class="featured-image">
+            <!-- Featured Insight -->
+            <article class="featured-insight" data-category="bbbee">
+                <div class="featured-image"><img src="servicez-images/optimized_CRM - Martech_427x295.jpg" alt=""></div>
                 <div class="featured-content">
                     <span class="featured-label">Featured Insight</span>
                     <h2>Navigating B-BBEE Compliance in 2025: What You Need to Know</h2>
@@ -96,9 +94,10 @@
                 </div>
             </article>
 
-           
-            <article class="insight-card">
-                <img src="servicez-images/optimized_Bursary Management Page_427x295.jpg" alt="Bursary Management" class="insight-image">
+            <!-- Insight Cards -->
+            <article class="insight-card" data-category="bbbee">
+                <div class="insight-image"><img src="servicez-images/optimized_Bursary Management Page_427x295.jpg" alt="">
+                </div>
                 <div class="insight-content">
                     <div class="insight-meta">
                         <span class="insight-category">Skills Development</span>
@@ -110,8 +109,8 @@
                 </div>
             </article>
 
-            <article class="insight-card">
-                <img src="servicez-images/optimized_Learnerships_655x453.jpg" alt="Learnerships" class="insight-image">
+            <article class="insight-card" data-category="bbbee">
+                <div class="insight-image"><img src="servicez-images/optimized_Learnerships_655x453.jpg" alt=""></div>
                 <div class="insight-content">
                     <div class="insight-meta">
                         <span class="insight-category">Learnerships</span>
@@ -123,8 +122,8 @@
                 </div>
             </article>
 
-            <article class="insight-card">
-                <img src="servicez-images/optimized_Employment Equity_427x295.jpg" alt="Employment Equity" class="insight-image">
+            <article class="insight-card" data-category="equity">
+                <div class="insight-image"><img src="servicez-images/optimized_Employment Equity_427x295.jpg" alt=""></div>
                 <div class="insight-content">
                     <div class="insight-meta">
                         <span class="insight-category">Employment Equity</span>
@@ -136,8 +135,8 @@
                 </div>
             </article>
 
-            <article class="insight-card">
-                <img src="servicez-images/optimized_CRM - Martech_427x295.jpg" alt="CRM Consulting" class="insight-image">
+            <article class="insight-card" data-category="digital">
+                <div class="insight-image"><img src="training/optimized_Training_655x368.jpg" alt=""></div>
                 <div class="insight-content">
                     <div class="insight-meta">
                         <span class="insight-category">Digital</span>
@@ -149,8 +148,8 @@
                 </div>
             </article>
 
-            <article class="insight-card">
-                <img src="servicez-images/optimized_Financial Reporting_427x295.jpg" alt="Financial Reporting" class="insight-image">
+            <article class="insight-card" data-category="esg">
+                <div class="insight-image"><img src="servicez-images/optimized_Financial Reporting_427x295.jpg" alt=""></div>
                 <div class="insight-content">
                     <div class="insight-meta">
                         <span class="insight-category">Tax & Finance</span>
@@ -162,8 +161,8 @@
                 </div>
             </article>
 
-            <article class="insight-card">
-                <img src="servicez-images/optimized_Higher ed_655x453.jpg" alt="Higher Education" class="insight-image">
+            <article class="insight-card" data-category="bbbee">
+                <div class="insight-image"><img src="servicez-images/optimized_Higher ed_655x453.jpg" alt=""> </div>
                 <div class="insight-content">
                     <div class="insight-meta">
                         <span class="insight-category">B-BBEE</span>
@@ -176,15 +175,10 @@
             </article>
         </div>
 
-        
-        <section class="newsletter">
-            <h3>Stay Updated</h3>
-            <p>Get the latest insights, regulatory updates, and strategic guidance delivered to your inbox</p>
-            <form class="newsletter-form" onsubmit="return false;">
-                <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
-                <button type="submit" class="newsletter-btn">Subscribe</button>
-            </form>
-        </section>
+        <div class="no-results">
+            <i class="fas fa-search" style="font-size: 48px; margin-bottom: 20px; opacity: 0.3;"></i>
+            <p>No insights found for this category.</p>
+        </div>
     </div>
 
 <div class="content-spacer"></div>
@@ -246,16 +240,16 @@
         const menuToggle = document.getElementById('menu-toggle');
         const navMenu = document.getElementById('nav-menu');
 
-        // Toggle mobile menu
+      
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking links (for mobile)
+        
         document.querySelectorAll('#nav-menu a').forEach(link => {
             link.addEventListener('click', (e) => {
-                // If it's a parent link with dropdown in mobile, toggle dropdown instead
+                
                 const parentLi = link.parentElement;
                 if (window.innerWidth <= 768 && parentLi.classList.contains('has-dropdown') && e.target === link) {
                     if (link.getAttribute('href') === '#' || link.getAttribute('href').endsWith('.html')) {
@@ -265,7 +259,7 @@
                     }
                 }
                 
-                // Close mobile menu on any other click
+                
                 if (window.innerWidth <= 768) {
                     navMenu.classList.remove('active');
                     menuToggle.classList.remove('active');
@@ -273,27 +267,27 @@
             });
         });
 
-        // Handle dropdown toggle on mobile
+        
         document.querySelectorAll('.has-dropdown > a').forEach(link => {
             link.addEventListener('click', (e) => {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
                     const parentLi = link.parentElement;
                     
-                    // Close other dropdowns
+                    
                     document.querySelectorAll('.has-dropdown').forEach(item => {
                         if (item !== parentLi) {
                             item.classList.remove('active');
                         }
                     });
                     
-                    // Toggle current dropdown
+                    
                     parentLi.classList.toggle('active');
                 }
             });
         });
 
-        // Close menu when clicking outside
+        
         document.addEventListener('click', (e) => {
             if (!e.target.closest('nav')) {
                 navMenu.classList.remove('active');
@@ -301,7 +295,7 @@
             }
         });
 
-        // Reset menu state on window resize
+        
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
                 navMenu.classList.remove('active');
@@ -313,24 +307,53 @@
         });
         const slider = document.getElementById('slider');
 
-        // Filter functionality
+      
         const filterBtns = document.querySelectorAll('.filter-btn');
-        
+        const insightCards = document.querySelectorAll('.insight-card');
+        const featuredInsight = document.querySelector('.featured-insight');
+        const noResults = document.querySelector('.no-results');
+
         filterBtns.forEach(btn => {
             btn.addEventListener('click', function() {
+                
                 filterBtns.forEach(b => b.classList.remove('active'));
+                
+               
                 this.classList.add('active');
+                
+                
+                const filterValue = this.getAttribute('data-filter');
+                
+                let visibleCount = 0;
+                
+                
+                if (filterValue === 'all' || featuredInsight.getAttribute('data-category') === filterValue) {
+                    featuredInsight.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    featuredInsight.classList.add('hidden');
+                }
+                
+                
+                insightCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    
+                    if (filterValue === 'all' || cardCategory === filterValue) {
+                        card.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+                
+                
+                if (visibleCount === 0) {
+                    noResults.classList.add('show');
+                } else {
+                    noResults.classList.remove('show');
+                }
             });
         });
-
-        // Newsletter form
-        const newsletterForm = document.querySelector('.newsletter-form');
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for subscribing! You will receive our latest insights soon.');
-            this.reset();
-        });
-
     </script>
 </body>
 </html>
