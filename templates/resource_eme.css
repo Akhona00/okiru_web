@@ -130,7 +130,7 @@
             width: 0;
             height: 2px;
             background: linear-gradient(90deg, #a855f7, #6366f1);
-            transition: width 0.3s ease;
+            transition: width 0.7s ease;
         }
 
         nav ul li a:hover::after {

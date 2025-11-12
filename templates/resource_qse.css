@@ -145,7 +145,7 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            top: calc(100% + 5px);
+            top: calc(100% + 1px);
             left: 20%;
             transform: translateX(-50%);
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.98) 0%, rgba(74, 0, 212, 0.95) 100%);
@@ -161,7 +161,7 @@
 
         nav ul li:hover .dropdown-content {
             display: flex;
-            animation: fadeInDown 0.3s ease forwards;
+            animation: fadeInDown 0.7s ease forwards;
         }
 
         @keyframes fadeInDown {

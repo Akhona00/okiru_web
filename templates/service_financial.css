@@ -136,7 +136,7 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            top: calc(100% + 5px);
+            top: calc(100% + 1px);
             left: -20%;
             transform: translateX(-50%);
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.98) 0%, rgba(74, 0, 212, 0.95) 100%);
@@ -148,7 +148,7 @@
             box-shadow: 0 10px 40px rgba(99, 0, 212, 0.4);
             border: 1px solid rgba(168, 85, 247, 0.2);
             opacity: 0;
-            animation: fadeInDown 0.3s ease forwards;
+            animation: fadeInDown 0.7s ease forwards;
         }
 
         @keyframes fadeInDown {
